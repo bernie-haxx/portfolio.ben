@@ -7,4 +7,4 @@ def home(request):
 
 def about(request):
 	projects=Project.objects.all()
-	return render(request,'home.html')	
+	return render(request,'home.html',locals())	
