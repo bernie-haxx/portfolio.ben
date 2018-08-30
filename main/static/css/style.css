@@ -688,7 +688,7 @@ ul {
 	}
 } 
 
-@media only screen and (max-width: 959px) 
+@media only screen and (max-width: 959px;min-width:640px) 
 {
  .header{
  	height:568px;
