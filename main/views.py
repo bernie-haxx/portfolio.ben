@@ -1,5 +1,9 @@
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
 def home(request):
-	return render(request,'home.html')
+	projects=Project.objects.all()
+	return render(request,'footer.html',locals())
+
+def about(request):
+	return render(request,'home.html')	
