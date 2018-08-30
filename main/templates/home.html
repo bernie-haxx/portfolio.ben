@@ -118,9 +118,10 @@
 			{%for project in projects%}
 
 <div class="card-container">
-  <div class="card">
-    <img src="{{project.picture.url}}" />
-    <p class="title-project"></p>
+  <div class="cards">
+  	<div class="side">
+    <img src="{{project.picture.url}}"></div>
+    <div class="side back">{{profile.description}}</p>
   </div>
 </div>
 
