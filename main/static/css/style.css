@@ -655,35 +655,36 @@ ul {
   background-color: #fff !important;
   transition: background-color 200ms linear;
 }
-@media (max-width: 1055px) 
+@media only screen and (max-width: 639px) 
 {
 	.me{
 		display: none !important;
 	}
 	#header{
-		width:1055px !important;
+		width:639px !important;
+		height:640px !important;
 	}
 	.baseline{
-		width:1055px !important;
+		width:639px !important;
 	}
 	#name{
-		width:1055px !important;
+		width:639px !important;
 		font-size: 20px;
 	}
 	#about{
-		width:1055px !important;
+		width:639px !important;
 		font-size: 15px;
 	}
 	#services{
-		width:1055px !important;
+		width:639px !important;
 		font-size: 15px;
 	}
 	#projects{
-		width:1055px !important;
+		width:639px !important;
 		font-size: 15px;
 	}
 	#contacts{
-		width:1055px !important;
+		width:639px !important;
 		font-size: 15px;
 	}
 } 
