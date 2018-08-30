@@ -661,29 +661,29 @@ ul {
 		display: none !important;
 	}
 	.header{
-		width:100%;
+		width:1055px;
 	}
 	.baseline{
-		width:100%;
+		width:1055px;
 	}
 	#name{
-		width:100%;
+		width:1055px;
 		font-size: 20px;
 	}
 	#about{
-		width:100%;
+		width:1055px;
 		font-size: 15px;
 	}
 	#services{
-		width:100%;
+		width:1055px;
 		font-size: 15px;
 	}
 	#projects{
-		width:100%;
+		width:1055px;
 		font-size: 15px;
 	}
 	#contacts{
-		width:100%;
+		width:1055px;
 		font-size: 15px;
 	}
 } 
