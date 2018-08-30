@@ -655,51 +655,35 @@ ul {
   background-color: #fff !important;
   transition: background-color 200ms linear;
 }
-@media (max-width: 959px) 
+@media only screen and (max-width: 1055px) 
 {
 	.me{
 		display: none !important;
 	}
-	#me{
-		display: none !important;
-	}	
-	#header{
-		width:639px !important;
-		height:640px !important;
+	.header{
+		width:100%;
 	}
 	.baseline{
-		width:639px !important;
+		width:100%;
 	}
 	#name{
-		width:639px !important;
+		width:100%;
 		font-size: 20px;
 	}
 	#about{
-		width:639px !important;
+		width:100%;
 		font-size: 15px;
 	}
 	#services{
-		width:639px !important;
+		width:100%;
 		font-size: 15px;
 	}
 	#projects{
-		width:639px !important;
+		width:100%;
 		font-size: 15px;
 	}
 	#contacts{
-		width:639px !important;
+		width:100%;
 		font-size: 15px;
 	}
 } 
-
-@media only screen and (max-width: 639px) 
-{
-.me{
-	display: none !important;
-}
- .header{
- 	height:640px;
- 	font-size:50px;
- 	width:100%;
- }
-}
