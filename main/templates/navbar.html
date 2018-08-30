@@ -1,25 +1,60 @@
-<div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; top: 200">
+<!DOCTYPE html>
+{% load bootstrap4 %}
+{% load static %}
+<html lang="en">
+<head>
+{% block styles %}
 
-        <nav class="uk-navbar-container ">
-            <div class="uk-container uk-container-expand">
-                <div uk-navbar>
+     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% bootstrap_css %}
 
-                    <ul class="uk-navbar-nav">
-                        <li class="uk-active"><a href="#">Active</a></li>
-                        <li>
-                            <a href="#">Parent</a>
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav uk-text-muted">
-                                    <li class="uk-active"><a href="#">Active</a></li>
-                                    <li><a href="#">Item</a></li>
-                                    <li><a href="#">Item</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
 
-                </div>
-            </div>
-        </nav>
+  {% endblock %}
+{% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+
+     {% bootstrap_javascript %}
+
+    {% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+{% block content %} 
+
+<div class='container'>
+
+<nav class="navbar navbar-expand-lg navbar-light trans fixed-top float-lg-left" >
+
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTexts" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div><a class='navbar-brand home-button text-align' href='#' ><img src='https://lh6.googleusercontent.com/-FvvQXidKdYA/UBUW05FBoSI/AAAAAAAAABk/U647afN33c8/s0-d/bk.png' class='image'></a></div>
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<div class="collapse navbar-collapse float-right" id="navbarTexts">
+    <ul class='navbar-nav mr-auto'>
+    
+        <li><a href='' class=" navbar-item title font-navbar left padder">Ben</a></li>    
+</ul>
     </div>
+
+<div class="collapse navbar-collapse float-right" id="navbarText">
+    <ul class='navbar-nav ml-auto'>
+      <li><a href='' class=" navbar-item title font-navbar right padder">About</a></li>
+     <li><a href='' class=" navbar-item title font-navbar right padder">Projects</a></li>
+    <li><a href='' class="navbar-link u-header title font-navbar right padder">More</a></li>
+</ul>
+    </div>
+   
+  
+  
+</nav>
+</div>
+</body> 
+{%endblock%}
+
+</html>

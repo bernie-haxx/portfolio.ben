@@ -1,0 +1,84 @@
+{% extends "base.html"%}
+{%block content%}
+<!-- 
+For CSS Grid expertise:
+Rachel Andrew: https://gridbyexample.com/
+Jen Simmons: http://labs.jensimmons.com/
+ -->
+ <style>
+   html {
+    background-color: #124559;
+    background-repeat: no-repeat;
+    background-image: url('../static/images/place.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center  6vw;
+}
+body {
+  font-family: 'Roboto Slab', serif;
+  font-size:1.8vw;
+  color: #D3E6D9;
+  height:550px;
+}
+a {
+  color: #D3E6D9;
+}
+
+p{
+  position: absolute;
+  bottom: 0;  
+  margin-bottom: 0.4vw;
+}
+ </style>
+ <html>
+ <body>
+<div id="welcome"></div>
+      <div id="back"></div>
+<div id="grid">
+<!-- row0 -->
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+<!-- row1 -->
+  <div></div>
+  <div></div>
+  <div id="row1a"></div>
+  <div id="row1b"><p class="forms">Welcome,<br>
+   Here is my Porfolio<br> <a href="{% url 'about'%}"> In this link</a>.</p></div>
+  <div></div>
+<!-- row2 -->
+  <div></div>
+  <div id="row2a"></div>
+  <div id="row2b" style="">    <div id='name'>
+      <h1  style="font-size: 72px !important;color:white;margin-right: 20px;" ><strong>B E N <br> K A R A N J A</strong></h1>
+ 
+
+      </div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+<!-- row3 -->
+  <div></div>
+  <div id="row3a"></div>
+  <div id="row3b"></div>
+  <div></div>
+  <div></div>
+<!-- row4 -->
+  <div></div>
+  <div></div>
+  <div></div>
+  <div id="row4a"></div>
+  <div id="row4b"></div>
+    <div></div>
+  <div></div>
+<div></div>
+</div>
+</body>
+</html>
+{%endblock%}
