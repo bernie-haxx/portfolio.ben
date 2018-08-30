@@ -660,6 +660,9 @@ ul {
 	.me{
 		display: none !important;
 	}
+	#me{
+		display: none !important;
+	}	
 	#header{
 		width:639px !important;
 		height:640px !important;
