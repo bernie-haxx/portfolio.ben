@@ -655,7 +655,7 @@ ul {
   background-color: #fff !important;
   transition: background-color 200ms linear;
 }
-@media only screen and (max-width: 1055px) 
+@media only screen and (max-width: 1055px;min-width:639px) 
 {
 	.me{
 		display: none !important;
@@ -688,10 +688,11 @@ ul {
 	}
 } 
 
-@media only screen and (max-width: 959px;min-width:640px) 
+@media only screen and (max-width: 639px;min-width:600px) 
 {
  .header{
  	height:568px;
  	font-size:50px;
+ 	width:100%;
  }
 }
