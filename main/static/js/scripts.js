@@ -1,3 +1,7 @@
+ AOS.init();
+
+
+
 const redCirc = new mojs.Shape({
   // isShowStart:true,
   left:0 ,top:0,
@@ -37,7 +41,7 @@ const redsparks = new mojs.Burst({
   children:{
     shape: 'line',
     points: 15,
-    stroke: {'red':'transparent'},
+    stroke: {'black':'transparent'},
     strokeWidth: 5,
     scaleX:{0.5:0},
     degreeShift: 'rand(-90,90)',
@@ -49,7 +53,7 @@ const redsparks = new mojs.Burst({
 });
 const triangles = new mojs.Burst({
   left:0 ,top:0,
-  radius:{0:200,easing:'cubic.out'},
+  radius:{0:100,easing:'cubic.out'},
   angle:{360:0, easing:'quad.out'},
   left:0,
   count:20,
@@ -59,7 +63,7 @@ const triangles = new mojs.Burst({
     // angle:{300:0},
     radius:{10:100},
     duration:3000,
-    fill:['red','purple','yellow']
+    fill:['black','white','grey']
   }
   
 });
@@ -72,5 +76,70 @@ document.addEventListener( 'click', function (e){
   sparks
     .tune({ x: e.pageX, y: e.pageY })
     .replay();
+
   
 });
+
+
+
+
+$(document).ready(function() {
+  $('.baseline').animate({left:'0'},{
+    duration: 2000
+  });
+  $('.me').animate({left:'0'},{
+    duration: 4000
+  });
+});
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+$("#me").find("a").click(function(e) {
+    e.preventDefault();
+    var section = $(this).attr("href");
+    $("html, body").animate({
+        scrollTop: $(section).offset().top,
+        
+    });
+});
+
+anime ({
+  targets: ['#welcome', '#back'],
+  width: '0px',
+  delay: function(el) {
+    if (el.classList.contains('first')) {
+      return 0;
+    } else {
+      return 1500;
+    }
+  },
+  duration: 1500,
+  loop: false,
+  easing: 'easeInOutQuad'
+});
+
+
+$(window).scroll(function(){
+    $("#header").css("opacity", 1 - $(window).scrollTop() / 500);
+  });
+
+/// Scroll fade in when 100px from the top 
+$(window).scroll(function() {
+  if ($(this).scrollTop()> 50) {
+    $('nav').fadeIn();
+   } else {
+    $('nav').fadeOut();
+   }
+});
+
+/// Scroll back to top
+$("a[href='#top']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+
