@@ -655,7 +655,7 @@ ul {
   background-color: #fff !important;
   transition: background-color 200ms linear;
 }
-@media only screen and (max-width: 639px) 
+@media (max-width: 959px) 
 {
 	.me{
 		display: none !important;
