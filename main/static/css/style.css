@@ -655,12 +655,12 @@ ul {
   background-color: #fff !important;
   transition: background-color 200ms linear;
 }
-@media only screen and (max-width: 1055px) 
+@media (max-width: 1055px) 
 {
 	.me{
 		display: none !important;
 	}
-	.header{
+	#header{
 		width:1055px !important;
 	}
 	.baseline{
