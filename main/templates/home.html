@@ -110,24 +110,22 @@
 			</div>
 			</div>
 	<!--Projects area -->
-		<div class="container"><div class="projects right" id="projects" style="transition: text 2s"> 
+		<div class="container">
+			<div class="projects right" id="projects" style="transition: text 2s"> 
 			<h1 class="forms aligner"><strong>Projects Done</strong></h1>
 			<p class="forms aligner" style="color:black"><strong>These are among the projects that i have done both personally and during collaborations:</strong></p>
-	<div class="flexbox">
-		
+
+		<div class="card-container">
 			{%for project in projects%}
 
-<div class="card-container">
+
   <div class="cards">
   	<div class="side">
     <img src="{{project.picture.url}}"></div>
     <div class="side back">{{profile.description}}</p>
   </div>
-</div>
-
 
 {%endfor%}
-
 </div>
 			</div></div>
 
