@@ -126,7 +126,7 @@ div#row2b{
 .cards .back {
   background: #eaeaed;
   color: #0087cc;
-  line-height: 150px;
+  line-height: 80px;
   text-align: center;
   transform: rotateY(180deg);
 }
@@ -165,7 +165,7 @@ opacity: 1.0;
 	margin-left: 80px;
 }
 .Technologies{
-	background-color: #C0C0C0;
+	background-color: rgba(0,0,0,0.1);
 	width:80%;
 	padding-top:50px;
 }

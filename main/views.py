@@ -6,4 +6,5 @@ def home(request):
 	return render(request,'footer.html',locals())
 
 def about(request):
-	return render(request,'home.html')	
+	projects=Project.objects.all()
+	return render(request,'home.html',locals())	

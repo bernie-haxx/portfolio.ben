@@ -110,33 +110,47 @@
 			</div>
 			</div>
 	<!--Projects area -->
-		<div class="container"><div class="projects right" id="projects" style="transition: text 2s"> 
-			<h1 class="forms aligner"><strong>Projects Done</strong></h1>
-			<p class="forms aligner" style="color:black"><strong>These are among the projects that i have done both personally and during collaborations:</strong></p>
-	<div class="flexbox">
-		
+		<div class="container">
+			<div class="projects right" id="projects" style="transition: text 2s"> 
+			<h1 class="forms aligner">
+				<strong>Projects Done</strong>
+			</h1>
+			<p class="forms aligner" style="color:black">
+				<strong>These are among the projects that i have done both personally and during collaborations:</strong>
+			</p>
+			
 			{%for project in projects%}
-
-
-  <div class="item-project">
-    <img src="{{project.picture.url}}" />
-    <p class="title-project"></p>
-  </div>
-
-
-
-{%endfor%}
+			<div class="card-container">
+  <div class="cards">
+  	<div class="side">
+  		<img src="{{project.picture.url}}">
+  	</div>
+  	<div class="side back"><p class="forms" style="color: black;font-size: 50px;">{{project.name}}</p>
+  		<p class="forms"style="color: black; padding-bottom: 0px !important;font-size: 15px;">{{project.description}}</p>
+  		<a class="forms uk-button uk-button-text" href="{{project.url}}">Click here to view </a>
 
 </div>
-			</div></div>
 
+  	  </div>
+  	  		</div>
+			{%endfor%}
+
+		</div></div>
+		
+			
 	<!--Contacts area -->
 	<div class="container">
 		<div class="contacts right" id="contacts" style="transition: text 2s">
 			<h1 class="forms aligner"><strong>Contacts</strong></h1>
-			<p class="forms aligner" style="color:white"><strong>Would you like to know more about me or work together?</strong><br>
-				<a href="mailto:benkaranja43@gmail.com" style="color:white;padding-top: 70px;" class="forms aligner uk-button uk-button-text ">benkaranja43@gmail.com</a></p>
-			
+			<p class="forms aligner" style="color:white"><strong>Would you like to know more about me or work together?</strong></p><br>
+			<p class="forms aligner">
+
+			<a href="https://www.linkedin.com/in/ben-karanja-4b161016a/" class="forms aligner uk-button uk-button-text " style="color:white;padding-top: 80px;"  >LinkedIn</a>
+			<br>
+			<a href="https://www.github.com/Benard18" class="forms aligner uk-button uk-button-text " style="color:white;padding-top: 80px;" >Github</a>
+			<br>
+				<a href="mailto:benkaranja43@gmail.com"  class="forms aligner uk-button uk-button-text " style="color:white;padding-top: 70px;">benkaranja43@gmail.com</a><br>
+			</p>
 		</div>		
 </div>
 
