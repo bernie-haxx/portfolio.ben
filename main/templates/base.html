@@ -1,54 +1,41 @@
-{% load static %}
+{% load static%}
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-
-  {% if title %}
-  <title></title>
-  
-  {% else %}
-    <title> BK Portfolio </title>
-    <link rel="shortcut icon" href="https://lh6.googleusercontent.com/-FvvQXidKdYA/UBUW05FBoSI/AAAAAAAAABk/U647afN33c8/s0-d/bk.png" />
-
-
+	{%if title%}
+	<title>
+		{{title}}-Portfolio
+	</title>
+	  {% else %}
+    <title> Portfolio </title>
   {% endif %}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Condensed" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300|Roboto+Mono" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Nova+Slim" rel="stylesheet">
+
   {% block styles %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/css/uikit.min.css" />
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-
-
-
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+  crossorigin="anonymous">
   {% endblock %}
-{% block scripts %}
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js"></script>
- <script src="https://unpkg.com/scrollreveal"></script>
-
-    {% endblock %}
+  <link rel="icon" href="data:;base64,=">
+<link href="https://fonts.googleapis.com/css?family=Karla|Megrim" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito|Poppins|Source+Sans+Pro" rel="stylesheet">
 </head>
-
 <body>
-    {% block content %}  
+	{%block content%}
 
 
-    {%endblock%}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mo-js/0.288.2/mo.min.js"></script>
-        <script src="{% static "js/scripts.js" %}"></script>
+	{%endblock%}
+{% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+<script type="text/javascript" src="{%static 'js/scripts.js'%}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
 
+{%endblock%}
 </body>
+</html>

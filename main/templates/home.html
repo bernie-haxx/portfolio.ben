@@ -1,164 +1,78 @@
-{% extends "base.html"%}
-{%include "basebootstrap.html"%}
-{%block content %}
+{% extends 'base.html'%}
+{% block content %}
+
 <body>
-<script>
-  AOS.init();
-</script>
-<div class='container-fluid'>
-	<!--Fixed side nav -->
-
-<div id="welcome"></div>
-      <div id="back"></div>
-			<div class='me'>
-				<div id='me'>
-					<a href='#me'><img src='https://lh6.googleusercontent.com/-FvvQXidKdYA/UBUW05FBoSI/AAAAAAAAABk/U647afN33c8/s0-d/bk.png' class='image'></a>
-					<a class="uk-button uk-button-text" href='#about' style="transition: text 2s">A B O U T</a>
-					<a class="uk-button uk-button-text" href='#services' style="transition: text 2s">S E R V I C E S</a>
-					<a class="uk-button uk-button-text" href='#projects' style="transition: text 2s">P R O J E C T S</a>
-					<a class="uk-button uk-button-text" href='#contacts' style="transition: text 2s">C O N T A C T S</a>
-				</div>
-			</div>
-		
-			<!--Home page area -->
-			<!-- <nav class="scrolltop">    
-    <h2><a href="#top" id="scrolltop">Top of Page</a></h2>
-</nav> -->
-				<div id='header'>
-					
-			<div class='baseline'>
-			<div id='name'>
-			<h1><strong>B E N <br>  K A R A N J A</strong><br> <p class="line-1 anim-typewriter formsss" style='padding-top:100px;'><strong>FullStack Developer.<br> Clean, Constant and Valuable.</strong></p></h1>
- 
-
-			</div>
-		</div>
+<div id="loader-wrapper">
+	<div class="bar">
 	</div>
+  <strong><div class="megrim"id="Welcome-loading">
+  	<h1>Hello There</h1>
+  </div></strong>
+  <div id="loader">
+  </div>
 
-			<!--About myself area -->
-			<div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500" class="container about" id="about" style="transition: text 2s">
-				
-				<div class="row about-me container">
-					<div class="col-md-6 col-xs-6 col-sm-6"><div class="photo-me uk-background-contain  uk-background-blend-darken left aligner padder marginer"></div></div>
-					<div class="col-md-6 col-xs-6 col-sm-6 right"><h1 class="forms aligner"><strong>About Me</strong></h1><p class="formsss aligner">I am a web developer based in Nairobi,Kenya.<br>As a web developer i have dedicated my time and effort to make <br>some interactive application based on what I have learned.<br>I have the strive to know more and <br>also to help others to reach their potential<br> in the tech industry.During my free time when am not<br> coding I usually explore more in Dancing just to<br> keep me on toes.I also love football.<br>The game is actually to die for!</p>
-					</div>
-
-				</div>
-
-			</div>
-
-			<!--Technologies used area -->
-			<div class="container"><div class="Technologies right" id="services" style="transition: text 2s">
-				<h1 class="forms aligner"><strong>Services</strong></h1>
-				<p class="formsss aligner"><strong>I am offering my services based on the following languages and programs:</strong></p>
-				<table class="uk-table uk-table-hover uk-table-divider uk-overflow-auto container forms right">
-    <thead>
-        <tr>
-            <th class="formsss aligner" style="color:black;"><strong>Language</strong></th>
-            <th class="formsss aligner" style="color:black;"><strong>Platform</strong></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>HTML5</td>
-            <td>Front End</td>
-
-        </tr>
-        <tr>
-            <td>CSS3</td>
-            <td>Front End</td>
-
-        </tr>
-        <tr>
-            <td>Javascript</td>
-            <td>Front End</td>
-
-        </tr>
-    <tr>
-            <td>Python</td>
-            <td>Back End</td>
-
-        </tr>
-        <tr>
-            <td>Django Framework</td>
-            <td>Back End and Front End</td>
-    
-        </tr>
-        <tr>
-            <td>Flask Framework</td>
-            <td>Back End and Front End</td>
- 
-        </tr>
-        <tr>
-            <td>Motion Javascript</td>
-            <td>Back End and Front End</td>
-
-        </tr>
-        <tr>
-            <td>Postgresql</td>
-            <td>Back End</td>
-
-        </tr>
-   		<tr>
-            <td>Unity Game Engine</td>
-            <td>Back End and Front End</td>
-
-        </tr>
-   
-    </tbody>
-</table>
-	<p class="forms aligner">More to come..</p>
-			</div>
-			</div>
-	<!--Projects area -->
-		<div class="container">
-			<div class="projects right" id="projects" style="transition: text 2s"> 
-			<h1 class="forms aligner">
-				<strong>Projects Done</strong>
-			</h1>
-			<p class="forms aligner" style="color:black">
-				<strong>These are among the projects that i have done both personally and during collaborations:</strong>
-			</p>
-			
-			{%for project in projects%}
-			<div class="card-container">
-  <div class="cards">
-  	<div class="side">
-  		<img src="{{project.picture.url}}">
-  	</div>
-  	<div class="side back"><p class="forms" style="color: black;font-size: 50px;">{{project.name}}</p>
-  		<p class="forms"style="color: black; padding-bottom: 0px !important;font-size: 15px;">{{project.description}}</p>
-  		<a class="forms uk-button uk-button-text" href="{{project.url}}">Click here to view </a>
-
+<div class="megrim" id="quoteContainer">
+      <p></p>
+      
+    </div>
+<div id="quoteAuthor" class="megrim">
+<p id="quoteName"></p>
+	
 </div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+  
+</div>
+<div id="barba-wrapper">
+  <div class="barba-container">
+  	<div id="content">
 
-  	  </div>
-  	  		</div>
-			{%endfor%}
 
-		</div></div>
-		
-			
-	<!--Contacts area -->
-	<div class="container">
-		<div class="contacts right" id="contacts" style="transition: text 2s">
-			<h1 class="forms aligner"><strong>Contacts</strong></h1>
-			<p class="forms aligner" style="color:white"><strong>Would you like to know more about me or work together?</strong></p><br>
-			<p class="forms aligner">
-
-			<a href="https://www.linkedin.com/in/ben-karanja-4b161016a/" class="forms aligner uk-button uk-button-text " style="color:white;padding-top: 80px;"  >LinkedIn</a>
-			<br>
-			<a href="https://www.github.com/Benard18" class="forms aligner uk-button uk-button-text " style="color:white;padding-top: 80px;" >Github</a>
-			<br>
-				<a href="mailto:benkaranja43@gmail.com"  class="forms aligner uk-button uk-button-text " style="color:white;padding-top: 70px;">benkaranja43@gmail.com</a><br>
-			</p>
-		</div>		
+<div class="box box_1">
+   <section id="meLeft">
+Bleeeeeeeeeeeeeeeeeeeeeeeeeeeh
+   </section>
+   <section id="meRight">Ahem!!</section>
+</div>
+<div class="box box_2 under">
+    <div>
+   	red
+      <h1>Bread</h1>
+      <h1></h1>
+      <h1></h1>
+      <h1></h1>
+   </div>
+</div>
+<div class="box box_3 under">
+    <div>
+   	red
+      <h1></h1>
+      <h1></h1>
+      <h1></h1>
+      <h1></h1>
+   </div>
+</div>
+<div class="box box_4 under">
+   <div>
+   	red
+      <h1></h1>
+      <h1></h1>
+      <h1></h1>
+      <h1></h1>
+   </div>
+</div>
+<div class="box box_5 under">
+   <div>
+   	red
+      <h1></h1>
+      <h1></h1>
+      <h1></h1>
+      <h1></h1>
+   </div>
+</div>
+</div>
+</div>
 </div>
 
 </body>
 {%endblock%}
-
-
-            
-   
-            
